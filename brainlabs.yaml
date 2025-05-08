@@ -1,0 +1,44 @@
+version: v1.2
+name: google-bigquery
+description: IntentScore sGTM
+status: building
+# Link to documentation about your project.
+# The document should explain the business purpose of the project, what it does, how
+# it works, what data is shared between Brainlabs and clients, and how sensitive
+# data is used, if any.
+docs: https://docs.google.com/document/d/1Lsdom5yp-TYuDgnJX6G1SzfPopTQOMnj/edit?usp=sharing&ouid=106328901091490828164&rtpof=true&sd=true
+# False if your project does not use personal information or other sensitive data.
+uses-sensitive-data: False
+threat-model: False
+dpo-approved: 2025-01-01
+secops-approved: 2025-01-01
+# The business owner is the business stakeholder of the project and responsible for
+# communicating with end-users.
+# Use the part of the email before the '@'.
+business-owner: rohan.choubey
+# The technical owner is responsible for implementing, deploying and operating the
+# project. This is usually the person making the request.
+# Use the part of the email before the '@'.
+technical-owner: rohan.choubey
+# List any other technical contacts. Use the part of the email before the '@'.
+maintainers:
+  - rohan.choubey
+# Use the name of the Google group for your team.
+team: Data
+apis:
+  -
+public-info:
+  # Use reach: client-specific-tool if the project is for specific clients.
+  reach: general-client-tool
+  platforms:
+    - google-cloud-platform
+# Uncomment if reach is client-specific-tool
+# client-ids:
+#   -
+  release-date: 2024-09-23
+
+deployments:
+  - type: google-cloud-platform
+    project-id: Tealium-EventStream-sGTM-POC
+    # The monthly budget in USD
+    budget: 100
